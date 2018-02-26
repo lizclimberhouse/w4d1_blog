@@ -4,5 +4,7 @@
 </p>
 <% @pages.each do |page| %>
   <h2><%= page.title %></h2>
-  <%= link_to 'Show Page', page_path(page.id) %> <!-- can just put page and it will know to pull the .id--><!--> two params 1) what do you want the link to say 2) what is the url -->
+  <%= link_to 'Show!', page_path(page) %>
+  <%= link_to 'Edit', edit_page_path(page) %>
+  <%= link_to 'Delete', page_path(page), method: :delete %>
 <% end %>

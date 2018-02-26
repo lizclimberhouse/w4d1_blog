@@ -40,7 +40,11 @@ class PagesController < ApplicationController
     end
   end
 
-
+  #DELETE /pages/:id
+  def destroy
+    Page.find(params[:id]).destroy
+    redirect_to pages_path
+  end
 
 # Anything not private needs to go above this private route/method
 
